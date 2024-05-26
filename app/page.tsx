@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";  
 import { FaMountain, FaBars, FaUser, FaFileAlt, FaFilter, FaSearch, FaRobot, FaEnvelope, FaBell, FaWindowMaximize, FaChartPie } from 'react-icons/fa';
 
-export default function Component() {
+export default function Homepage() {
   return (
     <>
       <header className="bg-white shadow dark:bg-gray-900">
