@@ -84,7 +84,7 @@ export default function Homepage() {
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
                   Create an account and securely log in to access our platform.
                 </p>
-                <Link className="text-primary-500 hover:text-primary-600 transition-colors" href="#">
+                <Link className="text-primary-500 hover:text-primary-600 transition-colors" href="/registration">
                   Get Started
                 </Link>
               </div>
@@ -104,7 +104,7 @@ export default function Homepage() {
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
                   Securely upload and manage your important documents.
                 </p>
-                <Link className="text-primary-500 hover:text-primary-600 transition-colors" href="#">
+                <Link className="text-primary-500 hover:text-primary-600 transition-colors" href="/resume">
                   Upload Documents
                 </Link>
               </div>
@@ -120,8 +120,8 @@ export default function Homepage() {
               <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow">
                 <FaSearch className="h-8 w-8 text-primary-500 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Job Listings</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">Browse our extensive job listings for nurses.</p>
-                <Link className="text-primary-500 hover:text-primary-600 transition-colors" href="#">
+                <p className="text-gray-600 dark:text-gray-400 mb-4">Browse our extensive job listings.</p>
+                <Link className="text-primary-500 hover:text-primary-600 transition-colors" href="/listings">
                   View Jobs
                 </Link>
               </div>
@@ -131,7 +131,7 @@ export default function Homepage() {
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
                   Easily search and filter job listings to find the perfect fit.
                 </p>
-                <Link className="text-primary-500 hover:text-primary-600 transition-colors" href="#">
+                <Link className="text-primary-500 hover:text-primary-600 transition-colors" href="/filter">
                   Search Jobs
                 </Link>
               </div>
@@ -141,7 +141,7 @@ export default function Homepage() {
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
                   Our AI algorithm will match you with the best job opportunities.
                 </p>
-                <Link className="text-primary-500 hover:text-primary-600 transition-colors" href="#">
+                <Link className="text-primary-500 hover:text-primary-600 transition-colors" href="jobMatching">
                   Apply Now
                 </Link>
               </div>
