@@ -1,277 +1,185 @@
-import Link from "next/link";
-import { Button } from "@/components/ui/button";  
-import { FaMountain, FaBars, FaUser, FaFileAlt, FaFilter, FaSearch, FaRobot, FaEnvelope, FaBell, FaWindowMaximize, FaChartPie } from 'react-icons/fa';
 
-export default function Homepage() {
+import Link from "next/link"
+import { FaMountain } from "react-icons/fa";
+
+export default function Component() {
   return (
-    <>
-      <header className="bg-white shadow dark:bg-gray-900">
-        <div className="container mx-auto px-4 py-4 md:py-6 flex items-center justify-between">
-          <Link className="flex items-center gap-2 font-bold text-gray-900 dark:text-white" href="#">
-            <FaMountain className="h-6 w-6" />
+    <div className="flex min-h-screen flex-col">
+      <header className="bg-[#6366F1] text-white">
+        <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
+          <Link href="#" className="flex items-center gap-2 text-lg font-bold" prefetch={false}>
+            <div className="h-6 w-6" />
+            <FaMountain />
             <span>Aurora Consults</span>
           </Link>
-          <nav className="hidden md:flex items-center gap-4">
-            <Link className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" href="#">
+          <nav className="hidden gap-6 text-sm font-medium md:flex">
+            <Link href="/filter" className="hover:text-gray-300" prefetch={false}>
               Job Search
             </Link>
-            <Link className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" href="#">
-              Program Search
+            <Link href="/programs" className="hover:text-gray-300" prefetch={false}>
+              Programs
             </Link>
-            <Link className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white" href="#">
+            <Link href="/dashboard" className="hover:text-gray-300" prefetch={false}>
+              Dashboard
+            </Link>
+            <Link href="/contact" className="hover:text-gray-300" prefetch={false}>
+              Contact
+            </Link>
+          </nav>
+          <div className="flex items-center gap-4">
+            <Link href="/login" className="hover:text-gray-300" prefetch={false}>
               Login
             </Link>
             <Link
-              className="bg-primary-500 text-white px-4 py-2 rounded-md hover:bg-primary-600 transition-colors"
-              href="#"
+              href="/registration"
+              className="rounded-md bg-[#4F46E5] px-4 py-2 text-sm font-medium hover:bg-[#4338CA]"
+              prefetch={false}
             >
               Register
             </Link>
-          </nav>
-          <div className="md:hidden">
-            <Button size="icon" variant="outline">
-              <FaBars className="h-6 w-6" />
-            </Button>
           </div>
         </div>
       </header>
-      <main>
-        <section className="bg-gray-100 dark:bg-gray-800 py-12 md:py-20">
-          <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 gap-8">
+      <main className="flex-1">
+        <section className="bg-[#F3F4F6] py-12">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="grid gap-8 md:grid-cols-2">
               <div>
-                <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                  Welcome to Aurora Consults
-                </h1>
-                <p className="text-gray-600 dark:text-gray-400 mb-8">
-                  Find your dream job or educational program with our AI-powered platform.
+                <h2 className="text-3xl font-bold tracking-tight text-[#1F2937]">Manage Your Profile</h2>
+                <p className="mt-4 text-[#6B7280]">
+                  Create and update your user profile, including uploading important documents.
                 </p>
-                <div className="flex gap-4">
-                  <Link
-                    className="bg-primary-500 text-slate-400 px-6 py-3 rounded-md hover:bg-primary-600 transition-colors font-semibold"
-                    href="#"
-                  >
-                    Find Jobs
-                  </Link>
-                  <Link className="text-primary-500 hover:text-primary-600 transition-colors" href="#">
-                    Explore Programs
-                  </Link>
-                </div>
+                <Link
+                  href="/profile"
+                  className="mt-6 inline-flex items-center rounded-md bg-[#4F46E5] px-4 py-2 text-sm font-medium text-white hover:bg-[#4338CA]"
+                  prefetch={false}
+                >
+                  Go to Profile
+                  <div className="ml-2 h-4 w-4" />
+                </Link>
               </div>
               <div>
-                <img
-                  alt="Hero Image"
-                  className="rounded-2xl"
-                  height={400}
-                  src="https://img.freepik.com/premium-vector/job-seeker-illustration-concept_225067-151.jpg"
-                  style={{
-                    aspectRatio: "600/400",
-                    objectFit: "cover",
-                  }}
-                  width={600}
-                />
+                <img src="https://th.bing.com/th/id/R.d225d5349fced6307a4bcc5e24d49c9b?rik=CEBR9JH6kGqRVg&pid=ImgRaw&r=0" alt="User Management" className="rounded-lg" />
               </div>
             </div>
           </div>
         </section>
-        <section className="py-12 md:py-20">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8">User Management</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow">
-                <FaUser className="h-8 w-8 text-primary-500 mb-4" />
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Registration and Login</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  Create an account and securely log in to access our platform.
-                </p>
-                <Link className="text-primary-500 hover:text-primary-600 transition-colors" href="/registration">
-                  Get Started
-                </Link>
+        <section className="bg-[#F3F4F6] py-12">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="grid gap-8 md:grid-cols-2">
+              <div>
+                <img src="https://th.bing.com/th/id/OIP.7yd3MdQAMZlMDh4Kfw8_GwHaF7?rs=1&pid=ImgDetMain" alt="Job Search" className="rounded-lg" />
               </div>
-              <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow">
-                <FaUser className="h-8 w-8 text-primary-500 mb-4" />
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Profile Creation</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  Build your professional profile and showcase your skills.
+              <div>
+                <h2 className="text-3xl font-bold tracking-tight text-[#1F2937]">Find Your Dream Job</h2>
+                <p className="mt-4 text-[#6B7280]">
+                  Search and apply for the best job opportunities with our AI-powered job matching.
                 </p>
-                <Link className="text-primary-500 hover:text-primary-600 transition-colors" href="#">
-                  Create Profile
-                </Link>
-              </div>
-              <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow">
-                <FaFileAlt className="h-8 w-8 text-primary-500 mb-4" />
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Document Upload</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  Securely upload and manage your important documents.
-                </p>
-                <Link className="text-primary-500 hover:text-primary-600 transition-colors" href="/resume">
-                  Upload Documents
+                <Link
+                  href="/filter"
+                  className="mt-6 inline-flex items-center rounded-md bg-[#4F46E5] px-4 py-2 text-sm font-medium text-white hover:bg-[#4338CA]"
+                  prefetch={false}
+                >
+                  Browse Jobs
+                  <div className="ml-2 h-4 w-4" />
                 </Link>
               </div>
             </div>
           </div>
         </section>
-        <section className="bg-gray-100 dark:bg-gray-800 py-12 md:py-20">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8">
-              Job Search & Application
-            </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow">
-                <FaSearch className="h-8 w-8 text-primary-500 mb-4" />
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Job Listings</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">Browse our extensive job listings.</p>
-                <Link className="text-primary-500 hover:text-primary-600 transition-colors" href="/listings">
-                  View Jobs
+        <section className="bg-[#F3F4F6] py-12">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="grid gap-8 md:grid-cols-2">
+              <div>
+                <h2 className="text-3xl font-bold tracking-tight text-[#1F2937]">Explore Educational Programs</h2>
+                <p className="mt-4 text-[#6B7280]">
+                  Search and apply for the best educational programs with our AI-powered recommendations.
+                </p>
+                <Link
+                  href="/programs"
+                  className="mt-6 inline-flex items-center rounded-md bg-[#4F46E5] px-4 py-2 text-sm font-medium text-white hover:bg-[#4338CA]"
+                  prefetch={false}
+                >
+                  Browse Programs
+                  <div className="ml-2 h-4 w-4" />
                 </Link>
               </div>
-              <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow">
-                <FaFilter className="h-8 w-8 text-primary-500 mb-4" />
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Search and Filter</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  Easily search and filter job listings to find the perfect fit.
-                </p>
-                <Link className="text-primary-500 hover:text-primary-600 transition-colors" href="/filter">
-                  Search Jobs
-                </Link>
+              <div>
+                <img src="https://th.bing.com/th/id/OIP.mLl3zDgp2hd5peMbqVBdIQHaFk?rs=1&pid=ImgDetMain" alt="Program Search" className="rounded-lg" />
               </div>
-              <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow">
-                <FaRobot className="h-8 w-8 text-primary-500 mb-4" />
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">AI-Powered Job Matching</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  Our AI algorithm will match you with the best job opportunities.
+            </div>
+          </div>
+        </section>
+        <section className="bg-[#F3F4F6] py-12">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="grid gap-8 md:grid-cols-2">
+              <div>
+                <img src="https://th.bing.com/th/id/R.3719f6c550e674a8f6a14ce981a47777?rik=suYaEGqzQRog6g&pid=ImgRaw&r=0" alt="Admin Dashboard" className="rounded-lg" />
+              </div>
+              <div>
+                <h2 className="text-3xl font-bold tracking-tight text-[#1F2937]">Manage Your Business</h2>
+                <p className="mt-4 text-[#6B7280]">
+                  Access the powerful admin dashboard to manage users, content, and analytics.
                 </p>
-                <Link className="text-primary-500 hover:text-primary-600 transition-colors" href="jobMatching">
-                  Apply Now
+                <Link
+                  href="/dashboard"
+                  className="mt-6 inline-flex items-center rounded-md bg-[#4F46E5] px-4 py-2 text-sm font-medium text-white hover:bg-[#4338CA]"
+                  prefetch={false}
+                >
+                  Go to Dashboard
+                  <div className="ml-2 h-4 w-4" />
                 </Link>
               </div>
             </div>
           </div>
         </section>
-        <section className="py-12 md:py-20">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8">
-              Program Search & Application
-            </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow">
-                <FaSearch className="h-8 w-8 text-primary-500 mb-4" />
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Program Listings</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  Explore various educational programs for career advancement.
+        <section className="bg-[#F3F4F6] py-12">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="grid gap-8 md:grid-cols-2">
+              <div>
+                <h2 className="text-3xl font-bold tracking-tight text-[#1F2937]">Stay Connected</h2>
+                <p className="mt-4 text-[#6B7280]">
+                  Communicate with your team and stay up-to-date with the latest notifications.
                 </p>
-                <Link className="text-primary-500 hover:text-primary-600 transition-colors" href="#">
-                  View Programs
+                <Link
+                  href="/messaging"
+                  className="mt-6 inline-flex items-center rounded-md bg-[#4F46E5] px-4 py-2 text-sm font-medium text-white hover:bg-[#4338CA]"
+                  prefetch={false}
+                >
+                  Go to Messages
+                  <div className="ml-2 h-4 w-4" />
                 </Link>
               </div>
-              <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow">
-                <FaFilter className="h-8 w-8 text-primary-500 mb-4" />
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Search and Filter</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  Find the right program by filtering based on your preferences.
-                </p>
-                <Link className="text-primary-500 hover:text-primary-600 transition-colors" href="#">
-                  Search Programs
-                </Link>
-              </div>
-              <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow">
-                <FaRobot className="h-8 w-8 text-primary-500 mb-4" />
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">AI-Powered Matching</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  Our AI will help you find the best educational opportunities.
-                </p>
-                <Link className="text-primary-500 hover:text-primary-600 transition-colors" href="#">
-                  Apply Now
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className="bg-gray-100 dark:bg-gray-800 py-12 md:py-20">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8">Communication</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow">
-                <FaEnvelope className="h-8 w-8 text-primary-500 mb-4" />
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Contact Employers</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  Directly reach out to employers for job opportunities.
-                </p>
-                <Link className="text-primary-500 hover:text-primary-600 transition-colors" href="#">
-                  Contact Now
-                </Link>
-              </div>
-              <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow">
-                <FaBell className="h-8 w-8 text-primary-500 mb-4" />
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Notifications</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  Receive updates on job applications and new opportunities.
-                </p>
-                <Link className="text-primary-500 hover:text-primary-600 transition-colors" href="#">
-                  Enable Notifications
-                </Link>
-              </div>
-              <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow">
-                <FaWindowMaximize className="h-8 w-8 text-primary-500 mb-4" />
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Messaging</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  Use our platform to communicate directly with potential employers.
-                </p>
-                <Link className="text-primary-500 hover:text-primary-600 transition-colors" href="#">
-                  Start Messaging
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className="py-12 md:py-20">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8">Reporting and Analytics</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow">
-                <FaChartPie className="h-8 w-8 text-primary-500 mb-4" />
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Performance Metrics</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  Track your job search and application performance.
-                </p>
-                <Link className="text-primary-500 hover:text-primary-600 transition-colors" href="#">
-                  View Metrics
-                </Link>
-              </div>
-              <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow">
-                <FaChartPie className="h-8 w-8 text-primary-500 mb-4" />
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Job Application Reports</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  Generate reports on your job application status and history.
-                </p>
-                <Link className="text-primary-500 hover:text-primary-600 transition-colors" href="#">
-                  Generate Reports
-                </Link>
-              </div>
-              <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow">
-                <FaChartPie className="h-8 w-8 text-primary-500 mb-4" />
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Analytics Dashboard</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  Access a comprehensive dashboard for job search analytics.
-                </p>
-                <Link className="text-primary-500 hover:text-primary-600 transition-colors" href="#">
-                  View Dashboard
-                </Link>
+              <div>
+                <img src="https://th.bing.com/th/id/OIP.Ov5wvkwQzGeP3fJSfU1LKAHaEy?rs=1&pid=ImgDetMain" alt="Communication" className="rounded-lg" />
               </div>
             </div>
           </div>
         </section>
       </main>
-      <footer className="bg-gray-900 text-white py-6">
-        <div className="container mx-auto px-4 flex justify-between">
-          <p>&copy; 2024 Aurora Consults. All rights reserved.</p>
-          <nav className="flex gap-4">
-            <Link className="hover:text-primary-500" href="#">Privacy Policy</Link>
-            <Link className="hover:text-primary-500" href="#">Terms of Service</Link>
-            <Link className="hover:text-primary-500" href="#">Contact Us</Link>
+      <footer className="bg-[#6366F1] text-white">
+        <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-4 py-8 md:flex-row md:px-6">
+          <div className="flex items-center gap-2">
+            <div className="h-6 w-6" />
+            <span className="text-lg font-bold">Aurora Consults</span>
+          </div>
+          <nav className="flex flex-wrap items-center gap-4 text-sm font-medium">
+            <Link href="/about" className="hover:text-gray-300" prefetch={false}>
+              About
+            </Link>
+            <Link href="/terms" className="hover:text-gray-300" prefetch={false}>
+              Terms
+            </Link>
+            <Link href="/privacy" className="hover:text-gray-300" prefetch={false}>
+              Privacy
+            </Link>
+            <Link href="/contact" className="hover:text-gray-300" prefetch={false}>
+              Contact
+            </Link>
           </nav>
+          <p className="text-sm text-[#D1D5DB]">&copy; 2024 Aurora Consults. All rights reserved.</p>
         </div>
       </footer>
-    </>
-  );
+    </div>
+  )
 }

@@ -1,8 +1,4 @@
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/xoQGvc48dWN
- * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
- */
+
 import Link from "next/link"
 
 export default function Component() {
@@ -18,8 +14,11 @@ export default function Component() {
             <Link href="#" className="hover:text-gray-300" prefetch={false}>
               Job Search
             </Link>
-            <Link href="#" className="hover:text-gray-300" prefetch={false}>
+            <Link href="#" className="font-bold text-white" prefetch={false}>
               Programs
+            </Link>
+            <Link href="#" className="hover:text-gray-300" prefetch={false}>
+              University
             </Link>
             <Link href="#" className="hover:text-gray-300" prefetch={false}>
               Dashboard
@@ -43,140 +42,87 @@ export default function Component() {
         </div>
       </header>
       <main className="flex-1">
-        <section className="bg-[#F3F4F6] py-12">
-          <div className="container mx-auto px-4 md:px-6">
-            <div className="grid gap-8 md:grid-cols-2">
-              <div>
-                <h2 className="text-3xl font-bold tracking-tight text-[#1F2937]">Find Your Dream Job</h2>
-                <p className="mt-4 text-[#6B7280]">
-                  Search through our extensive job listings and find the perfect opportunity for you.
-                </p>
-                <form className="mt-6 space-y-4">
-                  <div>
-                    <label htmlFor="job-title" className="block text-sm font-medium text-[#6B7280]">
-                      Job Title
-                    </label>
-                    <input
-                      type="text"
-                      id="job-title"
-                      className="mt-1 block w-full rounded-md border-[#D1D5DB] bg-white px-3 py-2 text-[#1F2937] shadow-sm focus:border-[#4F46E5] focus:ring-[#4F46E5]"
-                      placeholder="Enter job title"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="location" className="block text-sm font-medium text-[#6B7280]">
-                      Location
-                    </label>
-                    <input
-                      type="text"
-                      id="location"
-                      className="mt-1 block w-full rounded-md border-[#D1D5DB] bg-white px-3 py-2 text-[#1F2937] shadow-sm focus:border-[#4F46E5] focus:ring-[#4F46E5]"
-                      placeholder="Enter location"
-                    />
-                  </div>
-                  <div>
-                    <button
-                      type="submit"
-                      className="inline-flex w-full items-center justify-center rounded-md bg-[#4F46E5] px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-[#4338CA] focus:outline-none focus:ring-2 focus:ring-[#4F46E5] focus:ring-offset-2"
-                    >
-                      Search Jobs
-                    </button>
-                  </div>
-                </form>
-              </div>
-              <div>
-                <img src="/placeholder.svg" alt="Job Search" className="rounded-lg" />
-              </div>
-            </div>
-          </div>
-        </section>
         <section className="bg-white py-12">
           <div className="container mx-auto px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tight text-[#1F2937]">Latest Job Openings</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-[#1F2937]">Admin Dashboard</h2>
             <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               <div className="rounded-lg bg-[#F3F4F6] p-6 shadow-sm">
-                <h3 className="text-xl font-bold text-[#1F2937]">Software Engineer</h3>
-                <p className="mt-2 text-[#6B7280]">Develop and maintain web applications using modern technologies.</p>
-                <div className="mt-4 flex items-center justify-between">
-                  <span className="text-sm font-medium text-[#4F46E5]">Remote</span>
+                <div className="flex items-center justify-between">
+                  <h3 className="text-xl font-bold text-[#1F2937]">User Management</h3>
                   <Link
                     href="#"
                     className="rounded-md bg-[#4F46E5] px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-[#4338CA] focus:outline-none focus:ring-2 focus:ring-[#4F46E5] focus:ring-offset-2"
                     prefetch={false}
                   >
-                    Apply
+                    View Users
                   </Link>
                 </div>
+                <p className="mt-2 text-[#6B7280]">Manage user accounts, roles, and permissions.</p>
               </div>
               <div className="rounded-lg bg-[#F3F4F6] p-6 shadow-sm">
-                <h3 className="text-xl font-bold text-[#1F2937]">Marketing Coordinator</h3>
-                <p className="mt-2 text-[#6B7280]">Assist with the execution of marketing campaigns and strategies.</p>
-                <div className="mt-4 flex items-center justify-between">
-                  <span className="text-sm font-medium text-[#4F46E5]">Hybrid</span>
+                <div className="flex items-center justify-between">
+                  <h3 className="text-xl font-bold text-[#1F2937]">Program Management</h3>
                   <Link
                     href="#"
                     className="rounded-md bg-[#4F46E5] px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-[#4338CA] focus:outline-none focus:ring-2 focus:ring-[#4F46E5] focus:ring-offset-2"
                     prefetch={false}
                   >
-                    Apply
+                    Manage Programs
                   </Link>
                 </div>
+                <p className="mt-2 text-[#6B7280]">Create, update, and manage program offerings.</p>
               </div>
               <div className="rounded-lg bg-[#F3F4F6] p-6 shadow-sm">
-                <h3 className="text-xl font-bold text-[#1F2937]">Product Manager</h3>
-                <p className="mt-2 text-[#6B7280]">Define and execute the product roadmap for a growing business.</p>
-                <div className="mt-4 flex items-center justify-between">
-                  <span className="text-sm font-medium text-[#4F46E5]">On-site</span>
+                <div className="flex items-center justify-between">
+                  <h3 className="text-xl font-bold text-[#1F2937]">Enrollment Management</h3>
                   <Link
                     href="#"
                     className="rounded-md bg-[#4F46E5] px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-[#4338CA] focus:outline-none focus:ring-2 focus:ring-[#4F46E5] focus:ring-offset-2"
                     prefetch={false}
                   >
-                    Apply
+                    View Enrollments
                   </Link>
                 </div>
+                <p className="mt-2 text-[#6B7280]">Monitor and manage student enrollments.</p>
               </div>
               <div className="rounded-lg bg-[#F3F4F6] p-6 shadow-sm">
-                <h3 className="text-xl font-bold text-[#1F2937]">Data Analyst</h3>
-                <p className="mt-2 text-[#6B7280]">Analyze data to uncover insights and drive business decisions.</p>
-                <div className="mt-4 flex items-center justify-between">
-                  <span className="text-sm font-medium text-[#4F46E5]">Hybrid</span>
+                <div className="flex items-center justify-between">
+                  <h3 className="text-xl font-bold text-[#1F2937]">Analytics Dashboard</h3>
                   <Link
                     href="#"
                     className="rounded-md bg-[#4F46E5] px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-[#4338CA] focus:outline-none focus:ring-2 focus:ring-[#4F46E5] focus:ring-offset-2"
                     prefetch={false}
                   >
-                    Apply
+                    View Analytics
                   </Link>
                 </div>
+                <p className="mt-2 text-[#6B7280]">Gain insights into program performance and user engagement.</p>
               </div>
               <div className="rounded-lg bg-[#F3F4F6] p-6 shadow-sm">
-                <h3 className="text-xl font-bold text-[#1F2937]">Customer Service Representative</h3>
-                <p className="mt-2 text-[#6B7280]">Provide excellent customer support and resolve inquiries.</p>
-                <div className="mt-4 flex items-center justify-between">
-                  <span className="text-sm font-medium text-[#4F46E5]">Remote</span>
+                <div className="flex items-center justify-between">
+                  <h3 className="text-xl font-bold text-[#1F2937]">Content Management</h3>
                   <Link
                     href="#"
                     className="rounded-md bg-[#4F46E5] px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-[#4338CA] focus:outline-none focus:ring-2 focus:ring-[#4F46E5] focus:ring-offset-2"
                     prefetch={false}
                   >
-                    Apply
+                    Manage Content
                   </Link>
                 </div>
+                <p className="mt-2 text-[#6B7280]">Update and manage website content and resources.</p>
               </div>
               <div className="rounded-lg bg-[#F3F4F6] p-6 shadow-sm">
-                <h3 className="text-xl font-bold text-[#1F2937]">Sales Representative</h3>
-                <p className="mt-2 text-[#6B7280]">Generate new leads and close sales for our growing organization.</p>
-                <div className="mt-4 flex items-center justify-between">
-                  <span className="text-sm font-medium text-[#4F46E5]">On-site</span>
+                <div className="flex items-center justify-between">
+                  <h3 className="text-xl font-bold text-[#1F2937]">Financial Management</h3>
                   <Link
                     href="#"
                     className="rounded-md bg-[#4F46E5] px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-[#4338CA] focus:outline-none focus:ring-2 focus:ring-[#4F46E5] focus:ring-offset-2"
                     prefetch={false}
                   >
-                    Apply
+                    View Financials
                   </Link>
                 </div>
+                <p className="mt-2 text-[#6B7280]">Monitor financial performance and manage revenue streams.</p>
               </div>
             </div>
           </div>

@@ -1,9 +1,8 @@
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/PMHylULjlO7
- * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
- */
 import Link from "next/link"
+import { Label } from "@/components/ui/label"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { Button } from "@/components/ui/button"
 
 export default function Component() {
   return (
@@ -47,54 +46,36 @@ export default function Component() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid gap-8 md:grid-cols-2">
               <div>
-                <h2 className="text-3xl font-bold tracking-tight text-[#1F2937]">Create an Account</h2>
-                <p className="mt-4 text-[#6B7280]">Sign up to access all the features and benefits of our platform.</p>
+                <h2 className="text-3xl font-bold tracking-tight text-[#1F2937]">Create and Update Your Profile</h2>
+                <p className="mt-4 text-[#6B7280]">Manage your personal information, upload documents, and more.</p>
                 <form className="mt-6 space-y-4">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-[#6B7280]">
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      className="mt-1 block w-full rounded-md border-[#D1D5DB] bg-white px-3 py-2 text-[#1F2937] shadow-sm focus:border-[#4F46E5] focus:ring-[#4F46E5]"
-                      placeholder="Enter your name"
-                    />
+                    <Label htmlFor="name">Name</Label>
+                    <Input id="name" type="text" />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-[#6B7280]">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      className="mt-1 block w-full rounded-md border-[#D1D5DB] bg-white px-3 py-2 text-[#1F2937] shadow-sm focus:border-[#4F46E5] focus:ring-[#4F46E5]"
-                      placeholder="Enter your email"
-                    />
+                    <Label htmlFor="email">Email</Label>
+                    <Input id="email" type="email" />
                   </div>
                   <div>
-                    <label htmlFor="password" className="block text-sm font-medium text-[#6B7280]">
-                      Password
-                    </label>
-                    <input
-                      type="password"
-                      id="password"
-                      className="mt-1 block w-full rounded-md border-[#D1D5DB] bg-white px-3 py-2 text-[#1F2937] shadow-sm focus:border-[#4F46E5] focus:ring-[#4F46E5]"
-                      placeholder="Enter your password"
-                    />
+                    <Label htmlFor="phone">Phone</Label>
+                    <Input id="phone" type="tel" />
                   </div>
                   <div>
-                    <button
-                      type="submit"
-                      className="inline-flex w-full items-center justify-center rounded-md bg-[#4F46E5] px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-[#4338CA] focus:outline-none focus:ring-2 focus:ring-[#4F46E5] focus:ring-offset-2"
-                    >
-                      Create Account
-                    </button>
+                    <Label htmlFor="address">Address</Label>
+                    <Textarea id="address" />
                   </div>
+                  <div>
+                    <Label htmlFor="resume">Resume</Label>
+                    <Input id="resume" type="file" />
+                  </div>
+                  <Button type="submit" className="w-full bg-[#6366F1]">
+                    Save Profile
+                  </Button>
                 </form>
               </div>
               <div>
-                <img src="/placeholder.svg" alt="Registration" className="rounded-lg" />
+                <img src="/placeholder.svg" alt="User Profile" className="rounded-lg" />
               </div>
             </div>
           </div>
