@@ -1,5 +1,4 @@
-
-import Link from "next/link"
+import Link from "next/link";
 import { FaMountain } from "react-icons/fa";
 
 export default function Component() {
@@ -7,31 +6,54 @@ export default function Component() {
     <div className="flex min-h-screen flex-col">
       <header className="bg-[#6366F1] text-white">
         <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-          <Link href="#" className="flex items-center gap-2 text-lg font-bold" prefetch={false}>
+          <Link
+            href="/"
+            className="flex items-center gap-2 text-lg font-bold"
+            prefetch={false}
+          >
             <div className="h-6 w-6" />
-            <FaMountain />
             <span>Aurora Consults</span>
           </Link>
           <nav className="hidden gap-6 text-sm font-medium md:flex">
-            <Link href="#" className="hover:text-gray-300" prefetch={false}>
+            <Link
+              href="/filter"
+              className="hover:text-gray-300"
+              prefetch={false}
+            >
               Job Search
             </Link>
-            <Link href="#" className="hover:text-gray-300" prefetch={false}>
+            <Link
+              href="/programs"
+              className="hover:text-gray-300"
+              prefetch={false}
+            >
               Programs
             </Link>
-            <Link href="#" className="hover:text-gray-300" prefetch={false}>
+            <Link
+              href="/dashboard"
+              className="hover:text-gray-300"
+              prefetch={false}
+            >
               Dashboard
             </Link>
-            <Link href="#" className="hover:text-gray-300" prefetch={false}>
+            <Link
+              href="/contact"
+              className="hover:text-gray-300"
+              prefetch={false}
+            >
               Contact
             </Link>
           </nav>
           <div className="flex items-center gap-4">
-            <Link href="#" className="hover:text-gray-300" prefetch={false}>
+            <Link
+              href="/login"
+              className="hover:text-gray-300"
+              prefetch={false}
+            >
               Login
             </Link>
             <Link
-              href="#"
+              href="/registration"
               className="rounded-md bg-[#4F46E5] px-4 py-2 text-sm font-medium hover:bg-[#4338CA]"
               prefetch={false}
             >
@@ -48,7 +70,11 @@ export default function Component() {
             </h2>
             <p className="mt-2 text-center text-sm text-[#6B7280]">
               Or{" "}
-              <Link href="#" className="font-medium text-[#4F46E5] hover:text-[#4338CA]" prefetch={false}>
+              <Link
+                href="#"
+                className="font-medium text-[#4F46E5] hover:text-[#4338CA]"
+                prefetch={false}
+              >
                 register for a new account
               </Link>
             </p>
@@ -93,12 +119,19 @@ export default function Component() {
                   type="checkbox"
                   className="h-4 w-4 rounded border-[#D1D5DB] text-[#4F46E5] focus:ring-[#4F46E5]"
                 />
-                <label htmlFor="remember-me" className="ml-2 block text-sm text-[#6B7280]">
+                <label
+                  htmlFor="remember-me"
+                  className="ml-2 block text-sm text-[#6B7280]"
+                >
                   Remember me
                 </label>
               </div>
               <div className="text-sm">
-                <Link href="#" className="font-medium text-[#4F46E5] hover:text-[#4338CA]" prefetch={false}>
+                <Link
+                  href="#"
+                  className="font-medium text-[#4F46E5] hover:text-[#4338CA]"
+                  prefetch={false}
+                >
                   Forgot your password?
                 </Link>
               </div>
@@ -121,22 +154,40 @@ export default function Component() {
             <span className="text-lg font-bold">Aurora Consults</span>
           </div>
           <nav className="flex flex-wrap items-center gap-4 text-sm font-medium">
-            <Link href="#" className="hover:text-gray-300" prefetch={false}>
+            <Link
+              href="/about"
+              className="hover:text-gray-300"
+              prefetch={false}
+            >
               About
             </Link>
-            <Link href="#" className="hover:text-gray-300" prefetch={false}>
+            <Link
+              href="/terms"
+              className="hover:text-gray-300"
+              prefetch={false}
+            >
               Terms
             </Link>
-            <Link href="#" className="hover:text-gray-300" prefetch={false}>
+            <Link
+              href="/privacy"
+              className="hover:text-gray-300"
+              prefetch={false}
+            >
               Privacy
             </Link>
-            <Link href="#" className="hover:text-gray-300" prefetch={false}>
+            <Link
+              href="/contact"
+              className="hover:text-gray-300"
+              prefetch={false}
+            >
               Contact
             </Link>
           </nav>
-          <p className="text-sm text-[#D1D5DB]">&copy; 2024 Aurora Consults. All rights reserved.</p>
+          <p className="text-sm text-[#D1D5DB]">
+            &copy; 2024 Aurora Consults. All rights reserved.
+          </p>
         </div>
       </footer>
     </div>
-  )
+  );
 }

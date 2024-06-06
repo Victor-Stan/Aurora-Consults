@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaMountain } from 'react-icons/fa';
+import { FaMountain } from "react-icons/fa";
 
 export default function ResumeUpload() {
   return (
@@ -7,21 +7,28 @@ export default function ResumeUpload() {
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <Link className="flex items-center justify-center" href="#">
           <FaMountain className="h-6 w-6" />
-          <span className="ml-2 text-2xl font-bold text-gray-900 dark:text-white">Aurora Consults</span>
+          <span className="ml-2 text-2xl font-bold text-gray-900 dark:text-white">
+            Aurora Consults
+          </span>
         </Link>
       </div>
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
         <div className="bg-white px-4 py-8 shadow sm:rounded-lg sm:px-10 dark:bg-gray-800">
           <div className="space-y-6">
             <div>
-              <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Upload Your Resume</h2>
+              <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                Upload Your Resume
+              </h2>
               <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
                 Securely upload and manage your resume.
               </p>
             </div>
             <form action="#" className="space-y-6" method="POST">
               <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300" htmlFor="resume">
+                <label
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                  htmlFor="resume"
+                >
                   Resume
                 </label>
                 <div className="mt-1">
@@ -35,7 +42,10 @@ export default function ResumeUpload() {
                 </div>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300" htmlFor="description">
+                <label
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                  htmlFor="description"
+                >
                   Description
                 </label>
                 <div className="mt-1">

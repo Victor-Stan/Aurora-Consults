@@ -1,39 +1,58 @@
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/xoQGvc48dWN
- * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
- */
-import Link from "next/link"
+import Link from "next/link";
 
 export default function Component() {
   return (
     <div className="flex min-h-screen flex-col">
       <header className="bg-[#6366F1] text-white">
         <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-          <Link href="#" className="flex items-center gap-2 text-lg font-bold" prefetch={false}>
+          <Link
+            href="/"
+            className="flex items-center gap-2 text-lg font-bold"
+            prefetch={false}
+          >
             <div className="h-6 w-6" />
             <span>Aurora Consults</span>
           </Link>
           <nav className="hidden gap-6 text-sm font-medium md:flex">
-            <Link href="#" className="hover:text-gray-300" prefetch={false}>
+            <Link
+              href="/filter"
+              className="hover:text-gray-300"
+              prefetch={false}
+            >
               Job Search
             </Link>
-            <Link href="#" className="hover:text-gray-300" prefetch={false}>
+            <Link
+              href="/programs"
+              className="hover:text-gray-300"
+              prefetch={false}
+            >
               Programs
             </Link>
-            <Link href="#" className="hover:text-gray-300" prefetch={false}>
+            <Link
+              href="/dashboard"
+              className="hover:text-gray-300"
+              prefetch={false}
+            >
               Dashboard
             </Link>
-            <Link href="#" className="hover:text-gray-300" prefetch={false}>
+            <Link
+              href="/contact"
+              className="hover:text-gray-300"
+              prefetch={false}
+            >
               Contact
             </Link>
           </nav>
           <div className="flex items-center gap-4">
-            <Link href="#" className="hover:text-gray-300" prefetch={false}>
+            <Link
+              href="/login"
+              className="hover:text-gray-300"
+              prefetch={false}
+            >
               Login
             </Link>
             <Link
-              href="#"
+              href="/register"
               className="rounded-md bg-[#4F46E5] px-4 py-2 text-sm font-medium hover:bg-[#4338CA]"
               prefetch={false}
             >
@@ -47,13 +66,19 @@ export default function Component() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid gap-8 md:grid-cols-2">
               <div>
-                <h2 className="text-3xl font-bold tracking-tight text-[#1F2937]">Find Your Dream Job</h2>
+                <h2 className="text-3xl font-bold tracking-tight text-[#1F2937]">
+                  Find Your Dream Job
+                </h2>
                 <p className="mt-4 text-[#6B7280]">
-                  Search through our extensive job listings and find the perfect opportunity for you.
+                  Search through our extensive job listings and find the perfect
+                  opportunity for you.
                 </p>
                 <form className="mt-6 space-y-4">
                   <div>
-                    <label htmlFor="job-title" className="block text-sm font-medium text-[#6B7280]">
+                    <label
+                      htmlFor="job-title"
+                      className="block text-sm font-medium text-[#6B7280]"
+                    >
                       Job Title
                     </label>
                     <input
@@ -64,7 +89,10 @@ export default function Component() {
                     />
                   </div>
                   <div>
-                    <label htmlFor="location" className="block text-sm font-medium text-[#6B7280]">
+                    <label
+                      htmlFor="location"
+                      className="block text-sm font-medium text-[#6B7280]"
+                    >
                       Location
                     </label>
                     <input
@@ -85,20 +113,33 @@ export default function Component() {
                 </form>
               </div>
               <div>
-                <img src="/placeholder.svg" alt="Job Search" className="rounded-lg" />
+                <img
+                  src="https://th.bing.com/th/id/R.d6685ae3843eadf33d86ba4ebd0d149f?rik=n%2bpArohV6G7MrQ&riu=http%3a%2f%2funblast.com%2fwp-content%2fuploads%2f2020%2f05%2fJob-Hunting-Illustration.jpg&ehk=MVriC3RRC7zJFmfdfbBHfQwqtFzarphwqIj6yJSnz9E%3d&risl=&pid=ImgRaw&r=0"
+                  alt="Job Search"
+                  className="rounded-lg"
+                />
               </div>
             </div>
           </div>
         </section>
         <section className="bg-white py-12">
           <div className="container mx-auto px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tight text-[#1F2937]">Latest Job Openings</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-[#1F2937]">
+              Latest Job Openings
+            </h2>
             <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               <div className="rounded-lg bg-[#F3F4F6] p-6 shadow-sm">
-                <h3 className="text-xl font-bold text-[#1F2937]">Software Engineer</h3>
-                <p className="mt-2 text-[#6B7280]">Develop and maintain web applications using modern technologies.</p>
+                <h3 className="text-xl font-bold text-[#1F2937]">
+                  Software Engineer
+                </h3>
+                <p className="mt-2 text-[#6B7280]">
+                  Develop and maintain web applications using modern
+                  technologies.
+                </p>
                 <div className="mt-4 flex items-center justify-between">
-                  <span className="text-sm font-medium text-[#4F46E5]">Remote</span>
+                  <span className="text-sm font-medium text-[#4F46E5]">
+                    Remote
+                  </span>
                   <Link
                     href="#"
                     className="rounded-md bg-[#4F46E5] px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-[#4338CA] focus:outline-none focus:ring-2 focus:ring-[#4F46E5] focus:ring-offset-2"
@@ -109,10 +150,17 @@ export default function Component() {
                 </div>
               </div>
               <div className="rounded-lg bg-[#F3F4F6] p-6 shadow-sm">
-                <h3 className="text-xl font-bold text-[#1F2937]">Marketing Coordinator</h3>
-                <p className="mt-2 text-[#6B7280]">Assist with the execution of marketing campaigns and strategies.</p>
+                <h3 className="text-xl font-bold text-[#1F2937]">
+                  Marketing Coordinator
+                </h3>
+                <p className="mt-2 text-[#6B7280]">
+                  Assist with the execution of marketing campaigns and
+                  strategies.
+                </p>
                 <div className="mt-4 flex items-center justify-between">
-                  <span className="text-sm font-medium text-[#4F46E5]">Hybrid</span>
+                  <span className="text-sm font-medium text-[#4F46E5]">
+                    Hybrid
+                  </span>
                   <Link
                     href="#"
                     className="rounded-md bg-[#4F46E5] px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-[#4338CA] focus:outline-none focus:ring-2 focus:ring-[#4F46E5] focus:ring-offset-2"
@@ -123,10 +171,16 @@ export default function Component() {
                 </div>
               </div>
               <div className="rounded-lg bg-[#F3F4F6] p-6 shadow-sm">
-                <h3 className="text-xl font-bold text-[#1F2937]">Product Manager</h3>
-                <p className="mt-2 text-[#6B7280]">Define and execute the product roadmap for a growing business.</p>
+                <h3 className="text-xl font-bold text-[#1F2937]">
+                  Product Manager
+                </h3>
+                <p className="mt-2 text-[#6B7280]">
+                  Define and execute the product roadmap for a growing business.
+                </p>
                 <div className="mt-4 flex items-center justify-between">
-                  <span className="text-sm font-medium text-[#4F46E5]">On-site</span>
+                  <span className="text-sm font-medium text-[#4F46E5]">
+                    On-site
+                  </span>
                   <Link
                     href="#"
                     className="rounded-md bg-[#4F46E5] px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-[#4338CA] focus:outline-none focus:ring-2 focus:ring-[#4F46E5] focus:ring-offset-2"
@@ -137,10 +191,16 @@ export default function Component() {
                 </div>
               </div>
               <div className="rounded-lg bg-[#F3F4F6] p-6 shadow-sm">
-                <h3 className="text-xl font-bold text-[#1F2937]">Data Analyst</h3>
-                <p className="mt-2 text-[#6B7280]">Analyze data to uncover insights and drive business decisions.</p>
+                <h3 className="text-xl font-bold text-[#1F2937]">
+                  Data Analyst
+                </h3>
+                <p className="mt-2 text-[#6B7280]">
+                  Analyze data to uncover insights and drive business decisions.
+                </p>
                 <div className="mt-4 flex items-center justify-between">
-                  <span className="text-sm font-medium text-[#4F46E5]">Hybrid</span>
+                  <span className="text-sm font-medium text-[#4F46E5]">
+                    Hybrid
+                  </span>
                   <Link
                     href="#"
                     className="rounded-md bg-[#4F46E5] px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-[#4338CA] focus:outline-none focus:ring-2 focus:ring-[#4F46E5] focus:ring-offset-2"
@@ -151,10 +211,16 @@ export default function Component() {
                 </div>
               </div>
               <div className="rounded-lg bg-[#F3F4F6] p-6 shadow-sm">
-                <h3 className="text-xl font-bold text-[#1F2937]">Customer Service Representative</h3>
-                <p className="mt-2 text-[#6B7280]">Provide excellent customer support and resolve inquiries.</p>
+                <h3 className="text-xl font-bold text-[#1F2937]">
+                  Customer Service Representative
+                </h3>
+                <p className="mt-2 text-[#6B7280]">
+                  Provide excellent customer support and resolve inquiries.
+                </p>
                 <div className="mt-4 flex items-center justify-between">
-                  <span className="text-sm font-medium text-[#4F46E5]">Remote</span>
+                  <span className="text-sm font-medium text-[#4F46E5]">
+                    Remote
+                  </span>
                   <Link
                     href="#"
                     className="rounded-md bg-[#4F46E5] px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-[#4338CA] focus:outline-none focus:ring-2 focus:ring-[#4F46E5] focus:ring-offset-2"
@@ -165,10 +231,17 @@ export default function Component() {
                 </div>
               </div>
               <div className="rounded-lg bg-[#F3F4F6] p-6 shadow-sm">
-                <h3 className="text-xl font-bold text-[#1F2937]">Sales Representative</h3>
-                <p className="mt-2 text-[#6B7280]">Generate new leads and close sales for our growing organization.</p>
+                <h3 className="text-xl font-bold text-[#1F2937]">
+                  Sales Representative
+                </h3>
+                <p className="mt-2 text-[#6B7280]">
+                  Generate new leads and close sales for our growing
+                  organization.
+                </p>
                 <div className="mt-4 flex items-center justify-between">
-                  <span className="text-sm font-medium text-[#4F46E5]">On-site</span>
+                  <span className="text-sm font-medium text-[#4F46E5]">
+                    On-site
+                  </span>
                   <Link
                     href="#"
                     className="rounded-md bg-[#4F46E5] px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-[#4338CA] focus:outline-none focus:ring-2 focus:ring-[#4F46E5] focus:ring-offset-2"
@@ -189,22 +262,40 @@ export default function Component() {
             <span className="text-lg font-bold">Aurora Consults</span>
           </div>
           <nav className="flex flex-wrap items-center gap-4 text-sm font-medium">
-            <Link href="#" className="hover:text-gray-300" prefetch={false}>
+            <Link
+              href="/about"
+              className="hover:text-gray-300"
+              prefetch={false}
+            >
               About
             </Link>
-            <Link href="#" className="hover:text-gray-300" prefetch={false}>
+            <Link
+              href="/terms"
+              className="hover:text-gray-300"
+              prefetch={false}
+            >
               Terms
             </Link>
-            <Link href="#" className="hover:text-gray-300" prefetch={false}>
+            <Link
+              href="/privacy"
+              className="hover:text-gray-300"
+              prefetch={false}
+            >
               Privacy
             </Link>
-            <Link href="#" className="hover:text-gray-300" prefetch={false}>
+            <Link
+              href="contact"
+              className="hover:text-gray-300"
+              prefetch={false}
+            >
               Contact
             </Link>
           </nav>
-          <p className="text-sm text-[#D1D5DB]">&copy; 2024 Aurora Consults. All rights reserved.</p>
+          <p className="text-sm text-[#D1D5DB]">
+            &copy; 2024 Aurora Consults. All rights reserved.
+          </p>
         </div>
       </footer>
     </div>
-  )
+  );
 }

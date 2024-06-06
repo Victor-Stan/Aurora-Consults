@@ -1,15 +1,19 @@
-import Link from "next/link"
-import { Label } from "@/components/ui/label"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Button } from "@/components/ui/button"
+import Link from "next/link";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
 
 export default function Component() {
   return (
     <div className="flex min-h-screen flex-col">
       <header className="bg-[#6366F1] text-white">
         <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-          <Link href="#" className="flex items-center gap-2 text-lg font-bold" prefetch={false}>
+          <Link
+            href="#"
+            className="flex items-center gap-2 text-lg font-bold"
+            prefetch={false}
+          >
             <div className="h-6 w-6" />
             <span>Aurora Consults</span>
           </Link>
@@ -46,8 +50,12 @@ export default function Component() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid gap-8 md:grid-cols-2">
               <div>
-                <h2 className="text-3xl font-bold tracking-tight text-[#1F2937]">Create and Update Your Profile</h2>
-                <p className="mt-4 text-[#6B7280]">Manage your personal information, upload documents, and more.</p>
+                <h2 className="text-3xl font-bold tracking-tight text-[#1F2937]">
+                  Create and Update Your Profile
+                </h2>
+                <p className="mt-4 text-[#6B7280]">
+                  Manage your personal information, upload documents, and more.
+                </p>
                 <form className="mt-6 space-y-4">
                   <div>
                     <Label htmlFor="name">Name</Label>
@@ -75,7 +83,11 @@ export default function Component() {
                 </form>
               </div>
               <div>
-                <img src="/placeholder.svg" alt="User Profile" className="rounded-lg" />
+                <img
+                  src="/placeholder.svg"
+                  alt="User Profile"
+                  className="rounded-lg"
+                />
               </div>
             </div>
           </div>
@@ -101,9 +113,11 @@ export default function Component() {
               Contact
             </Link>
           </nav>
-          <p className="text-sm text-[#D1D5DB]">&copy; 2024 Aurora Consults. All rights reserved.</p>
+          <p className="text-sm text-[#D1D5DB]">
+            &copy; 2024 Aurora Consults. All rights reserved.
+          </p>
         </div>
       </footer>
     </div>
-  )
+  );
 }
